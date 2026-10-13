@@ -1,0 +1,15 @@
+.git
+.gitignore
+.dockerignore
+.idea
+.vscode
+target/
+uploads/
+*.log
+*.env
+*.env.*
+*.ps1
+build_*.txt
+run_*.txt
+test_*.txt
+README.md

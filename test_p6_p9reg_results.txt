@@ -1,0 +1,354 @@
+﻿
+=== SETUP ===
+powershell : 
+ConvertFrom-Json : Cannot 
+At line:1 char:1
++ powershell 
+-ExecutionPolicy Bypass 
+-NonInteractive -File 
+"d:\B.TECH_P ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (C  
+  onvertFrom-Json : Can   
+ not :String) [], Remo    
+teException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p6.ps1:18 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p6.ps1:18 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] User1 login
+  [PASS] User2 login
+  [PASS] User1 creates application (ID=144)
+  [PASS] User2 creates application (ID=145)
+
+=== 1. Authentication ===
+  [PASS] 1. Unauthenticated comment request -> 401
+  [PASS] 2. Invalid JWT -> 401
+
+=== 2. Comments CRUD & Validation ===
+  [PASS] 3. Add valid comment -> 201
+  [PASS] Comment returned ID
+  [PASS] 4. Get comments -> 200
+  [PASS] Get comments returned 1 comment
+  [PASS] Comment content matches
+  [PASS] 5. Update own comment -> 200
+  [PASS] Updated content matches
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p6.ps1:18 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] 7. Empty content -> 400
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p6.ps1:18 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] 8. Blank content -> 400
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p6.ps1:18 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] 9. Oversized content (> 2000 chars) -> 400
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p6.ps1:18 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] 10. Nonexistent application -> 404
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p6.ps1:45 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] 11. Nonexistent comment -> 404
+  [PASS] 6. Delete own comment -> 204
+
+=== 3. Ownership Isolation ===
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p6.ps1:18 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] 12. User A cannot comment on User B application -> 403
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p6.ps1:31 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] 13. User A cannot read User B comments -> 403
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p6.ps1:45 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] 14. User A cannot update User B comment -> 403
+  [PASS] 15. User A cannot delete User B comment -> 403
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p6.ps1:31 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] 16. User A cannot read User B history -> 403
+
+=== 4. Activity History Timeline ===
+  [PASS] Fetch application history -> 200
+  [PASS] 17. Application creation generates history
+  [PASS] 18. Application update generates history
+  [PASS] 19. Status change generates history
+  [PASS] Status change description contains old and new status
+  [PASS] 20. Unchanged status update does not generate extra STATUS_CHANGED event
+  [PASS] 21. Comment creation generates history
+  [PASS] 22. Comment update generates history
+  [PASS] 23. Comment deletion generates history
+  [PASS] 24. History is ordered newest first (createdAt DESC)
+
+============================================================
+PHASE 6 TEST RESULTS
+  Passed : 34
+  Failed : 0
+============================================================

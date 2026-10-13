@@ -1,0 +1,113 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.jobtrack:jobtrack >------------------------
+[INFO] Building JobTrack 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.4:run (default-cli) > test-compile @ jobtrack >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ jobtrack ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ jobtrack ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ jobtrack ---
+[INFO] skip non existing resourceDirectory d:\B.TECH_PROJECTS\JobTrack\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ jobtrack ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.3.4:run (default-cli) < test-compile @ jobtrack <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.4:run (default-cli) @ jobtrack ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-09-16T20:15:55.747+05:30  INFO 3624 --- [           main] com.jobtrack.JobTrackApplication         : Starting JobTrackApplication using Java 24.0.2 with PID 3624 (D:\B.TECH_PROJECTS\JobTrack\target\classes started by ACER in d:\B.TECH_PROJECTS\JobTrack)
+2026-09-16T20:15:55.750+05:30  INFO 3624 --- [           main] com.jobtrack.JobTrackApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-16T20:15:56.739+05:30  INFO 3624 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-16T20:15:56.875+05:30  INFO 3624 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 5 JPA repository interfaces.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/C:/Users/ACER/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.30/tomcat-embed-core-10.1.30.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-09-16T20:15:57.743+05:30  INFO 3624 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-16T20:15:57.756+05:30  INFO 3624 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-16T20:15:57.756+05:30  INFO 3624 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-09-16T20:15:57.828+05:30  INFO 3624 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-16T20:15:57.828+05:30  INFO 3624 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2030 ms
+2026-09-16T20:15:58.485+05:30  INFO 3624 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/jobtrack_db (PostgreSQL 17.10)
+2026-09-16T20:15:58.493+05:30  WARN 3624 --- [           main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 17.10 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 16.
+2026-09-16T20:15:58.557+05:30  INFO 3624 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.053s)
+2026-09-16T20:15:58.632+05:30  INFO 3624 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 6
+2026-09-16T20:15:58.637+05:30  INFO 3624 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-09-16T20:15:58.753+05:30  INFO 3624 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-16T20:15:58.809+05:30  INFO 3624 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-09-16T20:15:58.839+05:30  INFO 3624 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-16T20:15:59.136+05:30  INFO 3624 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-16T20:15:59.157+05:30  INFO 3624 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-16T20:15:59.212+05:30  INFO 3624 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1f12d5e0
+2026-09-16T20:15:59.215+05:30  INFO 3624 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-16T20:15:59.242+05:30  WARN 3624 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-16T20:16:00.462+05:30  INFO 3624 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-16T20:16:00.509+05:30  INFO 3624 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-16T20:16:00.899+05:30  INFO 3624 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-16T20:16:01.379+05:30  INFO 3624 --- [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-09-16T20:16:01.380+05:30  WARN 3624 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2026-09-16T20:16:01.510+05:30  WARN 3624 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-16T20:16:01.932+05:30  INFO 3624 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-09-16T20:16:02.887+05:30  INFO 3624 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-16T20:16:02.917+05:30  INFO 3624 --- [           main] com.jobtrack.JobTrackApplication         : Started JobTrackApplication in 7.508 seconds (process running for 7.79)
+2026-09-16T20:16:43.761+05:30  INFO 3624 --- [nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-16T20:16:43.761+05:30  INFO 3624 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-16T20:16:43.762+05:30  INFO 3624 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-16T20:16:45.002+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.027+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.041+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.048+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.059+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.070+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.081+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.089+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.108+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.121+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.134+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.140+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.151+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.157+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.162+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.169+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.174+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.179+05:30  WARN 3624 --- [io-8080-exec-10] o.s.core.service.GenericResponseService  : Json Processing Exception occurred: additionalProperties must be either a Boolean or a Schema instance
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1664] (through reference chain: io.swagger.v3.oas.models.responses.ApiResponses["400"]->io.swagger.v3.oas.models.responses.ApiResponse["content"]->io.swagger.v3.oas.models.media.Content["*/*"]->io.swagger.v3.oas.models.media.MediaType["schema"]->io.swagger.v3.oas.models.media.Schema["additionalProperties"])
+2026-09-16T20:16:45.184+05:30  INFO 3624 --- [io-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 363 ms

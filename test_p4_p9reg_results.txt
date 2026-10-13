@@ -1,0 +1,340 @@
+﻿
+=== SETUP ===
+  [PASS] User1 login
+  [PASS] User2 login
+  [PASS] Admin login
+
+=== 1. Authentication ===
+  [PASS] No JWT -> 401
+  [PASS] Valid USER JWT -> 200
+  [PASS] Valid ADMIN JWT -> 200
+
+=== 2. CRUD ===
+  [PASS] Create -> 201
+  [PASS] Create returns id
+  [PASS] Create: companyName=Google
+  [PASS] Create: status=APPLIED
+  [PASS] Get by id -> 200
+  [PASS] Get: jobRole correct
+  [PASS] Update -> 200
+  [PASS] Update: status=INTERVIEW
+  [PASS] Delete -> 204
+powershell : 
+ConvertFrom-Json : Cannot 
+At line:1 char:1
++ powershell 
+-ExecutionPolicy Bypass 
+-NonInteractive -File 
+"d:\B.TECH_P ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (C  
+  onvertFrom-Json : Can   
+ not :String) [], Remo    
+teException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p4.ps1:32 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] Get deleted -> 404
+
+=== 3. Status Values ===
+  [PASS] Status APPLIED accepted
+  [PASS] Status SCREENING accepted
+  [PASS] Status INTERVIEW accepted
+  [PASS] Status OFFER accepted
+  [PASS] Status REJECTED accepted
+  [PASS] Status WITHDRAWN accepted
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p4.ps1:46 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] Invalid status in body -> 400
+
+=== 4. Seeding Data ===
+  [PASS] Seeded 6 apps
+
+=== 5. Search ===
+  [PASS] Search 'google' finds results
+  [PASS] Search 'ENGINEER' (case-insensitive)
+  [PASS] Search 'microsoft' finds Microsoft
+  [PASS] Search no match -> 0 results
+
+=== 6. Filter by Status ===
+  [PASS] Filter INTERVIEW: has results
+  [PASS] Filter INTERVIEW: all items are INTERVIEW
+  [PASS] Filter OFFER: has results
+  [PASS] Search+filter combo -> 200
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p4.ps1:32 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] Invalid status query param -> 400
+
+=== 7. Date Filtering ===
+  [PASS] fromDate filter -> 200
+  [PASS] toDate filter -> 200
+  [PASS] fromDate+toDate range -> 200
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p4.ps1:32 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] Invalid date -> 400
+
+=== 8. Sorting ===
+  [PASS] Sort appliedDate asc -> 200
+  [PASS] appliedDate asc: ascending order
+  [PASS] Sort appliedDate desc -> 200
+  [PASS] Sort companyName -> 200
+  [PASS] Sort status -> 200
+  [PASS] Sort jobRole -> 200
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p4.ps1:32 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] Unsupported sort field -> 400
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p4.ps1:32 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] Invalid direction -> 400
+
+=== 9. Pagination ===
+  [PASS] Page 0, size 3 -> 200
+  [PASS] Page 0: got 3 items
+  [PASS] Metadata: currentPage=0
+  [PASS] Metadata: pageSize=3
+  [PASS] Metadata: totalElements > 0
+  [PASS] Metadata: totalPages > 0
+  [PASS] Page 1: currentPage=1
+  [PASS] Size 5: at most 5 items
+  [PASS] Beyond last page: empty
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p4.ps1:32 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] size > 100 -> 400
+
+=== 10. Ownership ===
+  [PASS] User2 creates app id=135
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p4.ps1:32 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] User1 cannot read User2 app -> 403
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p4.ps1:46 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] User1 cannot update User2 app -> 403
+  [PASS] User1 cannot delete User2 app -> 403
+  [PASS] User1 list doesn't include User2 app
+
+============================================================
+PHASE 4 API TEST RESULTS
+  Passed : 60
+  Failed : 0
+============================================================

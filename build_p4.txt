@@ -1,0 +1,39 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.jobtrack:jobtrack >------------------------
+[INFO] Building JobTrack 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ jobtrack ---
+[INFO] Deleting d:\B.TECH_PROJECTS\JobTrack\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ jobtrack ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ jobtrack ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 28 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ jobtrack ---
+[INFO] skip non existing resourceDirectory d:\B.TECH_PROJECTS\JobTrack\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ jobtrack ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ jobtrack ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ jobtrack ---
+[INFO] Building jar: d:\B.TECH_PROJECTS\JobTrack\target\jobtrack-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (repackage) @ jobtrack ---
+[INFO] Replacing main artifact d:\B.TECH_PROJECTS\JobTrack\target\jobtrack-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to d:\B.TECH_PROJECTS\JobTrack\target\jobtrack-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.304 s
+[INFO] Finished at: 2026-09-16T19:21:02+05:30
+[INFO] ------------------------------------------------------------------------

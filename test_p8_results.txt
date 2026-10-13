@@ -1,0 +1,35 @@
+﻿
+=== SETUP ===
+  [PASS] User1 login
+  [PASS] User2 login
+  [PASS] Admin login
+  [PASS] User1 creates application (ID=104)
+
+=== PHASE 8 TESTS ===
+  [PASS] 1. Application starts successfully
+  [PASS] 2. Health endpoint returns 200 UP
+  [PASS] 3. Swagger/OpenAPI endpoint reachable
+  [PASS] 4. Protected endpoint without JWT -> 401
+  [PASS] 5. Invalid JWT -> 401
+  [PASS] 6. Valid JWT works -> 200
+  [PASS] 7a. Validation error -> 400
+  [PASS] 7b. Has timestamp
+  [PASS] 7c. Has status 400
+  [PASS] 7d. Has error Bad Request
+  [PASS] 7e. Has message
+  [PASS] 7f. Has path
+  [PASS] 8. Missing resource -> 404
+  [PASS] 9. Ownership isolation -> 403
+  [PASS] 10. Admin can access user app -> 200
+  [PASS] 11. Pagination size > 100 -> 400
+  [PASS] 12. Invalid sort field -> 400
+  [PASS] 13a. CORS OPTIONS -> 200
+  [PASS] 13b. CORS Allow-Origin matches
+  [PASS] 14. No sensitive data / stack trace in error response
+  [PASS] 15. User2 cannot download User1 document -> 403
+
+============================================================
+PHASE 8 TEST RESULTS
+  Passed : 25
+  Failed : 0
+============================================================

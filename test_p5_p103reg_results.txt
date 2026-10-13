@@ -1,0 +1,63 @@
+﻿
+=== SETUP ===
+  [PASS] User1 login
+  [PASS] User2 login
+  [PASS] Empty user login
+  [PASS] Admin login
+
+=== 1. Dashboard Security ===
+  [PASS] No JWT dashboard summary -> 401
+  [PASS] No JWT dashboard recent -> 401
+
+=== 2. Empty Account Dashboard ===
+  [PASS] Empty user summary -> 200
+  [PASS] Empty user totalApplications = 0
+  [PASS] Empty user applied = 0
+  [PASS] Empty user screening = 0
+  [PASS] Empty user interview = 0
+  [PASS] Empty user offers = 0
+  [PASS] Empty user rejected = 0
+  [PASS] Empty user withdrawn = 0
+  [PASS] Empty user recent -> empty list
+
+=== 3. Status Breakdown & Ownership ===
+  [PASS] User1 dashboard summary -> 200
+  [PASS] User1 totalApplications = 6
+  [PASS] User1 applied = 1
+  [PASS] User1 screening = 1
+  [PASS] User1 interview = 1
+  [PASS] User1 offers = 1
+  [PASS] User1 rejected = 1
+  [PASS] User1 withdrawn = 1
+  [PASS] User2 totalApplications = 2
+  [PASS] User2 applied = 2
+  [PASS] User2 interview = 0
+  [PASS] User1 total remains 6 (isolated from User2)
+
+=== 4. Status Transition ===
+  [PASS] Status transition -> 200
+  [PASS] Total applications remains 6
+  [PASS] Applied count decreased to 0
+  [PASS] Interview count increased to 2
+
+=== 5. Application Deletion ===
+  [PASS] Delete application -> 204
+  [PASS] Total applications decreased to 5
+  [PASS] Interview count decreased to 1
+
+=== 6. Recent Applications Endpoint ===
+  [PASS] Recent applications -> 200
+  [PASS] Recent applications returned list <= 5
+  [PASS] Most recent application is Comp6
+
+=== 7. Phase 1-4 Regression ===
+  [PASS] GET /api/applications pagination -> 200
+  [PASS] Paged content count matches total
+  [PASS] Search filter -> 200
+  [PASS] Search matches 1 record
+
+============================================================
+PHASE 5 TEST RESULTS
+  Passed : 41
+  Failed : 0
+============================================================

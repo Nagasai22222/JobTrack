@@ -1,0 +1,127 @@
+﻿
+=== SETUP ===
+  [PASS] User1 login
+  [PASS] User2 login
+  [PASS] User1 creates application (ID=194)
+  [PASS] User2 creates application (ID=195)
+
+=== 1. Authentication ===
+  [PASS] 1. Unauthenticated upload -> 401
+  [PASS] 2. Unauthenticated list -> 401
+  [PASS] 3. Unauthenticated download -> 401
+  [PASS] 4. Unauthenticated delete -> 401
+
+=== 2. Upload & Validation ===
+  [PASS] 5. Upload valid PDF -> 201
+  [PASS] Returned document ID
+  [PASS] Document originalFileName matches
+  [PASS] 28. Generated stored filename differs (not exposed in DTO)
+  [PASS] 6. Upload valid TXT -> 201
+  [PASS] 7. Upload valid DOCX -> 201
+  [PASS] 8. Empty file -> 400
+  [PASS] 9. Unsupported extension (.exe) -> 400
+  [PASS] 10. Unsupported content type -> 400
+  [PASS] 11. Oversized file (> 5MB) -> 400
+  [PASS] 12. Invalid document type -> 400
+  [PASS] 26. Path traversal filename -> 400
+  [PASS] 27. Absolute path manipulation -> 400
+
+=== 3. Retrieval & Download ===
+  [PASS] 13. List documents -> 200
+  [PASS] List count equals 3
+  [PASS] 14. Documents ordered newest first
+  [PASS] 15. Download valid document -> 200
+  [PASS] 16. Download has correct content type
+  [PASS] 17. Download uses safe original filename
+
+=== 4. Ownership Isolation ===
+  [PASS] 18. User A cannot upload to User B application -> 403
+powershell : 
+ConvertFrom-Json : Cannot 
+At line:1 char:1
++ powershell 
+-ExecutionPolicy Bypass 
+-NonInteractive -File 
+"d:\B.TECH_P ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (C  
+  onvertFrom-Json : Can   
+ not :String) [], Remo    
+teException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p7.ps1:32 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] 19. User A cannot list User B documents -> 403
+ConvertFrom-Json : Cannot 
+bind argument to 
+parameter 'InputObject' 
+because it is null.
+At D:\B.TECH_PROJECTS\JobT
+rack\test_p7.ps1:32 
+char:46
++         try { $b = 
+$_.ErrorDetails.Message | 
+ConvertFrom-Json } catch 
+...
++                         
+                     
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : InvalidData: (:)  
+   [ConvertFrom-Json],    
+ ParameterBindingValid    
+ationException
+    + FullyQualifiedError 
+   Id : ParameterArgumen  
+  tValidationErrorNullN   
+ otAllowed,Microsoft.P    
+owerShell.Commands.Co    
+nvertFromJsonCommand
+ 
+  [PASS] 20. User A cannot download User B document -> 403
+  [PASS] 21. User A cannot delete User B document -> 403
+
+=== 5. Delete Document ===
+  [PASS] 22. Delete own document -> 204
+  [PASS] 23. Deleted metadata no longer in list
+  [PASS] 25. Deleting nonexistent document -> 404
+
+=== 6. Activity History Integration ===
+  [PASS] Fetch application history -> 200
+  [PASS] 29. Upload generates DOCUMENT_UPLOADED history event
+  [PASS] 30. Delete generates DOCUMENT_DELETED history event
+
+============================================================
+PHASE 7 TEST RESULTS
+  Passed : 37
+  Failed : 0
+============================================================
