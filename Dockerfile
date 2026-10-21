@@ -11,11 +11,10 @@ RUN mvn clean package -DskipTests
 # Stage 2: Production Runtime Stage
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
-
-# Create non-root system user for runtime security
-RUN addgroup -S jobtrack && adduser -S jobtrack -G jobtrack
+RUN addgroup -S jobtrack && adduser -S jobtrack -G jobtrack \
+    && mkdir -p /app/uploads/job-applications \
+    && chown -R jobtrack:jobtrack /app/uploads
 USER jobtrack:jobtrack
-
 # Copy JAR artifact from build stage
 COPY --from=builder /app/target/jobtrack-0.0.1-SNAPSHOT.jar app.jar
 
